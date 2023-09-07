@@ -155,11 +155,7 @@ void main()
 	agent.position += direction * uDeltaTime * settings.moveSpeed * uMoveSpeed;
 
 	
-
-	
-
-
-	
+	// Output the data 
 	imageStore(mTDComputeOutputs[0], ivec2(gl_GlobalInvocationID.xy), TDOutputSwizzle(vec4(agent.position,0,0)));
 	imageStore(mTDComputeOutputs[1], ivec2(gl_GlobalInvocationID.xy), TDOutputSwizzle(vec4(settings.color, agent.angle)));
 
